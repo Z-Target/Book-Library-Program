@@ -11,6 +11,9 @@ class Library {
     }
 
     public boolean addBook(String bookName, int numPagesRead, int maxPages) {
+        if (maxPages <= 0) {
+            return false;
+        }
         if (!this.library.containsKey(bookName)) {
             this.library.put(bookName, new Book(bookName, numPagesRead, maxPages));
             return true;
