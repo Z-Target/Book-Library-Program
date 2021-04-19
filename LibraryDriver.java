@@ -9,8 +9,9 @@ public class LibraryDriver {
         System.out.println("Welcome to the library");
         while (true) {
             System.out.println("What would you like to do?");
-            System.out.println("Options: \n1. add book <\"book name\"> <current page number (optional)> <max pages>\n" +
-                    "2. remove book <\"book name\">\n3. set page number <\"book name\"> <page number>\n4. view library\n5. quit");
+            System.out.println("Options: \n1. add book <book name> <current page number (optional)> <max pages>\n" +
+                    "2. remove book <book name>\n3. set page number <book name> <page number>\n4. view library\n5. quit");
+            System.out.println("Enter your option here: ");
             String line = scanner.nextLine();
             if (line.equals("quit")) {
                 return;
