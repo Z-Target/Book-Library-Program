@@ -5,7 +5,12 @@ public class Book {
     public String bookName;
 
     public Book(String bookName, int numPagesRead, int maxPages) {
-        this.complete = false;
+        if (numPagesRead < 0) {
+            numPagesRead = 0;
+        } else if (numPagesRead > maxPages) {
+            numPagesRead = maxPages;
+        }
+        this.complete = (numPagesRead == maxPages);
         this.bookName = bookName;
         this.numPagesRead = numPagesRead;
         this.maxPages = maxPages;
